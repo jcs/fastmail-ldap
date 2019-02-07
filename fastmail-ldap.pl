@@ -26,12 +26,11 @@ use Encode qw/encode decode/;
 use vars qw { $ldapserver $username $password $basedn $attrb @emails $email};
 
 # --- configuration ---
-$ldapserver = 'ldap.messagingengine.com';
-$username = 'cn=USERNAME@fastmail.fm,dc=User';
-$password = 'PASSWD';
-$basedn = 'dc=AddressBook';
-$attrb = 'MULTIMAIL';
-#$attrb = 'mail';
+$ldapserver = "ldaps://ldap.fastmail.com";
+$username = "cn=USERNAME@EXAMPLE.COM,dc=User";
+$password = "YOUR-APP-SPECIFIC-PASSWORD";
+$basedn = "dc=AddressBook";
+$attrb = "MULTIMAIL";
 # --- end configuration ---
 
 my $search=encode("UTF-8", join(" ", @ARGV));
